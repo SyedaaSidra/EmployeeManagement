@@ -1,0 +1,13 @@
+# Node.js
+node_modules/
+dist/
+.env
+.DS_Store
+npm-debug.log*
+
+# Optional: Ignore package-lock.json (if you don't want it tracked)
+
+
+# Optional: If you have any build folders or other unnecessary files, add them here
+# .angular/
+# build/
