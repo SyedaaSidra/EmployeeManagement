@@ -20,6 +20,7 @@ exports.createDepartment = async (req, res) => {
 exports.getAllDepartments = async (req, res) => {
   try {
     const AllDepartments = await departmentModel.find({});
+    res.json(AllDepartments);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
