@@ -5,5 +5,9 @@ const departmentSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  description: {
+    type: String,
+    required: false,
+  },
 });
 exports.module = mongoose.model("Department", departmentSchema);
