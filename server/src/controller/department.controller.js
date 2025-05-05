@@ -1,4 +1,4 @@
-const departmentModel = requir("../models/department.js");
+const departmentModel = require("../models/department");
 
 //create new Department:
 
@@ -31,7 +31,7 @@ exports.getAllDepartments = async (req, res) => {
 exports.getDepartmentById = async (req, res) => {
   const { id } = req.params;
   try {
-    const department = departmentModel.findById(id);
+    const department = await departmentModel.findById(id);
     if (!department) {
       res.status(404).json({ error: "depaterment does not exist" });
     }

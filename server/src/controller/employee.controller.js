@@ -1,4 +1,4 @@
-const employeeModel = requir("../models/employee.js");
+const employeeModel = require("../models/Employee");
 
 //create new employee:
 
@@ -31,7 +31,7 @@ exports.getAllemployees = async (req, res) => {
 exports.getemployeeById = async (req, res) => {
   const { id } = req.params;
   try {
-    const employee = employeeModel.findById(id);
+    const employee = await employeeModel.findById(id);
     if (!employee) {
       res.status(404).json({ error: "employee does not exist" });
     }
