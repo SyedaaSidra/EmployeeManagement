@@ -4,6 +4,17 @@ const app = express();
 const employees = require("./routes/employees");
 const departments = require("./routes/departments");
 const { default: mongoose } = require("mongoose");
+// npm install cors
+const cors = require("cors");
+
+app.use(
+  cors({
+    origin: "http://localhost:5173", // your React app
+    methods: ["GET", "POST", "OPTIONS", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type"],
+  })
+);
+
 app.use(express.json());
 app.use((req, res, next) => {
   console.log(`Incoming request: ${req.method} ${req.url}`);
