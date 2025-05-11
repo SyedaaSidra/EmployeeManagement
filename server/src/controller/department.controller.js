@@ -56,3 +56,17 @@ exports.deleteDepartment = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+//update department
+exports.updateDepartment = async (req, res) => {
+  try {
+    const department = await departmentModel.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+    if (!department) return res.status(404).json({ message: "Not found" });
+    res.json(department);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
