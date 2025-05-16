@@ -1,4 +1,4 @@
-const employeeModel = require("../models/Employee");
+const employeeModel = require("../models/employee");
 
 //create new employee:
 
