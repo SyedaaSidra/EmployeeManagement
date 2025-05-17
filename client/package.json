@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
     "preview": "vite preview",
-    "build": "view"
+    "build": "vite build"
   },
   "keywords": [],
   "type": "module",
