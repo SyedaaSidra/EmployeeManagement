@@ -11,7 +11,7 @@ export const createEmployee = async (employee) => {
 
 export const getEmplyees = async () => {
   const res = await fetch(
-    "employeemanagement-production-522e.up.railway.app/api/employees"
+    "https://employeemanagement-production-522e.up.railway.app/api/employees"
   );
   return res.json();
 };
