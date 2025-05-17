@@ -9,7 +9,10 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: "http://localhost:5173", // your React app
+    origin: [
+      "http://localhost:5173",
+      "https://sparkly-peony-e8b19e.netlify.app",
+    ], // your React app
     methods: ["GET", "POST", "OPTIONS", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type"],
   })
