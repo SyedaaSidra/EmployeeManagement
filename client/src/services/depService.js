@@ -15,7 +15,7 @@ export const createDepartment = async (dep) => {
 export const getDepartments = async () => {
   console.log(API);
   const res = await fetch(
-    "employeemanagement-production-522e.up.railway.app/api/departments"
+    "https://employeemanagement-production-522e.up.railway.app/api/departments"
   );
   return res.json();
 };
