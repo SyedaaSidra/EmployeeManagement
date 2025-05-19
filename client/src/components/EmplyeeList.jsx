@@ -102,7 +102,9 @@ function EmployeeList() {
                   ))}
                 </select>
                 <button onClick={() => handleUpdate(emp._id)}>Save</button>
-                <button onClick={handleCancel}>Cancel</button>
+                <button onClick={handleCancel} className="cancel">
+                  Cancel
+                </button>
               </>
             ) : (
               <>
@@ -112,7 +114,12 @@ function EmployeeList() {
                 <p>{emp.dateOfBirth}</p>
 
                 <button onClick={() => handleEdit(emp)}>Edit</button>
-                <button onClick={() => handleDelete(emp._id)}>Delete</button>
+                <button
+                  onClick={() => handleDelete(emp._id)}
+                  className="delete"
+                >
+                  Delete
+                </button>
               </>
             )}
           </li>

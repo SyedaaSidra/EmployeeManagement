@@ -49,10 +49,12 @@ button:hover {
   background-color: #0056b3;
 }
 
-button:last-child {
+.delete,
+.cancel {
   background-color: #dc3545;
 }
 
-button:last-child:hover {
+.delete,
+.cancel {
   background-color: #b02a37;
 }

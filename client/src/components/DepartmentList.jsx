@@ -20,7 +20,6 @@ function DepartmentList() {
     setDepartments(departments);
   }
   function handleEdit(dep) {
-    console.log("#########");
     setEditId(dep._id);
     setEditForm({
       name: dep.name,
@@ -67,14 +66,21 @@ function DepartmentList() {
                   placeholder="Description"
                 />
                 <button onClick={() => handleUpdate(dep._id)}>Save</button>
-                <button onClick={handleCancel}>Cancel</button>
+                <button onClick={handleCancel} className="cancel">
+                  Cancel
+                </button>
               </>
             ) : (
               <>
                 <h3>{dep.name}</h3>
                 <p>{dep.description}</p>
                 <button onClick={() => handleEdit(dep)}>Edit</button>
-                <button onClick={() => handleDelete(dep._id)}>Delete</button>
+                <button
+                  onClick={() => handleDelete(dep._id)}
+                  className="delete"
+                >
+                  Delete
+                </button>
               </>
             )}
           </li>
