@@ -53,6 +53,7 @@ function DepartmentList() {
               <>
                 <input
                   value={editForm.name}
+                  required
                   onChange={(e) =>
                     setEditForm({ ...editForm, name: e.target.value })
                   }
@@ -60,6 +61,7 @@ function DepartmentList() {
                 />
                 <input
                   value={editForm.description}
+                  required
                   onChange={(e) =>
                     setEditForm({ ...editForm, description: e.target.value })
                   }

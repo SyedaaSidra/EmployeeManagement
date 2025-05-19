@@ -20,6 +20,7 @@ function addDepartment() {
         <input
           type="text"
           placeholder="Name"
+          required
           value={form.name}
           onChange={(e) => {
             setForm({ ...form, name: e.target.value });
@@ -29,6 +30,7 @@ function addDepartment() {
         <input
           type="text"
           placeholder="Description"
+          required
           value={form.description}
           onChange={(e) => {
             setForm({ ...form, description: e.target.value });

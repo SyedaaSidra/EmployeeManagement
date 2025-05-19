@@ -70,6 +70,7 @@ function EmployeeList() {
               <>
                 <input
                   value={editForm.name}
+                  required
                   onChange={(e) =>
                     setEditForm({ ...editForm, name: e.target.value })
                   }
@@ -77,6 +78,7 @@ function EmployeeList() {
                 />
                 <input
                   value={editForm.surname}
+                  required
                   onChange={(e) =>
                     setEditForm({ ...editForm, surname: e.target.value })
                   }
@@ -84,6 +86,7 @@ function EmployeeList() {
                 />
                 <input
                   value={editForm.dateOfBirth}
+                  required
                   onChange={(e) =>
                     setEditForm({ ...editForm, dateOfBirth: e.target.value })
                   }
@@ -91,6 +94,7 @@ function EmployeeList() {
                 />
                 <select
                   value={editForm.department}
+                  required
                   onChange={(e) =>
                     setEditForm({ ...editForm, department: e.target.value })
                   }

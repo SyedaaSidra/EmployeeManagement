@@ -37,6 +37,7 @@ function addEmployee() {
         <input
           type="text"
           placeholder="Name"
+          required
           value={form.name}
           onChange={(e) => {
             setForm({ ...form, name: e.target.value });
@@ -57,6 +58,7 @@ function addEmployee() {
           type="text"
           placeholder="Date Of Birth"
           value={form.dateOfBirth}
+          required
           onChange={(e) => {
             setForm({ ...form, dateOfBirth: e.target.value });
           }}
@@ -64,6 +66,7 @@ function addEmployee() {
         <label htmlFor="">Choose Department : </label>
         <select
           value={form.department || ""}
+          required
           onChange={(e) => {
             setForm({ ...form, department: e.target.value });
           }}
